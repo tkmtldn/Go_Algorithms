@@ -6,7 +6,7 @@ import (
 	"math/rand"
 )
 
-func quickSort(arr []int) []int {
+func QuickSort(arr []int) []int {
 
 	if len(arr) == 0 {
 		return arr
@@ -29,8 +29,8 @@ func quickSort(arr []int) []int {
 		}
 	}
 
-	low = quickSort(low)
-	high = quickSort(high)
+	low = QuickSort(low)
+	high = QuickSort(high)
 
 	low = append(low, med...)
 	low = append(low, high...)
@@ -41,5 +41,5 @@ func quickSort(arr []int) []int {
 func main() {
 	arr := random.RandArray(10)
 	fmt.Println("Before: ", arr)
-	fmt.Println("After: ", quickSort(arr))
+	fmt.Println("After: ", QuickSort(arr))
 }
